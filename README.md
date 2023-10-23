@@ -63,7 +63,7 @@ To run the application:
 
 1. Clone the repository.
 2. Set up the MySQL database and create the necessary tables (as defined in the project).
-3. Navigate to the project directory and run the Express application using `node index.js`. Or Run npm run start
+3. Navigate to the project directory and run the Express application using `node index.js`. Or Run `npm run start`
 4. Build and run the Angular frontend.
 
 Please ensure that you have the required dependencies and configurations in place for a smooth project setup.
