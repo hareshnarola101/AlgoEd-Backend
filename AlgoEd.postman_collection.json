@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "9c7737f8-8f24-4005-90ad-d520927f24f8",
+		"name": "AlgoEd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7532881"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"hareshnarola\",\n    \"password\" : \"haresh05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth"
+			},
+			"response": []
+		},
+		{
+			"name": "spots",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJoYXJlc2huYXJvbGEiLCJpYXQiOjE2OTgwNTY0ODN9.6YttzaI3yU1gCd93Gb5dN8QXmtXnty3DLE19nPEBCJM",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/spots"
+			},
+			"response": []
+		},
+		{
+			"name": "spots/:spotName",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJoYXJlc2huYXJvbGEiLCJpYXQiOjE2OTgwNTY0ODN9.6YttzaI3yU1gCd93Gb5dN8QXmtXnty3DLE19nPEBCJM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/spots/:spotName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"spots",
+						":spotName"
+					],
+					"variable": [
+						{
+							"key": "spotName",
+							"value": "Easter Island"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJoYXJlc2huYXJvbGEiLCJsYXRpdHVkZSI6IjIxLjE3MDIwMCIsImxvbmdpdHVkZSI6IjcyLjgzMTEwMCIsImlhdCI6MTY5ODA2NTAxOX0.2e8aB2poG2N3lKHGPYR8ER5WQNfEAzakd-q--A0JKv4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\" : \"21.1702\",\n    \"longitude\" : \"72.8311\",\n    \"selectedSpot\" : \"Easter Island\",\n    \"cyclingSpeed\" : \"15\",\n    \"dailyCyclingHours\" : \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/calculate"
+			},
+			"response": []
+		},
+		{
+			"name": "estimate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJoYXJlc2huYXJvbGEiLCJsYXRpdHVkZSI6IjIxLjE3MDIwMCIsImxvbmdpdHVkZSI6IjcyLjgzMTEwMCIsImlhdCI6MTY5ODA2MTg3MX0.Q2TXVEsOVFp4c1O9MoEmAqV0kDobboC8kghyRP3MyG8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\" : \"21.1702\",\n    \"longitude\" : \"72.8311\",\n    \"selectedSpot\" : \"Easter Island\",\n    \"cyclingSpeed\" : \"15\",\n    \"dailyCyclingHours\" : \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/estimate?selectedSpot=Easter Island&cyclingSpeed=15&dailyCyclingHours=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"estimate"
+					],
+					"query": [
+						{
+							"key": "selectedSpot",
+							"value": "Easter Island"
+						},
+						{
+							"key": "cyclingSpeed",
+							"value": "15"
+						},
+						{
+							"key": "dailyCyclingHours",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
